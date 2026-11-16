@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aetheris｜部署</title>
+  <style>
+    :root{--ink:#30271d;--muted:#6f6253;--paper:#fffaf1;--orange:#f2b45b;--line:#c9b99f}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#f7efe1,#edf3e9);color:var(--ink);font-family:"Microsoft JhengHei UI","Microsoft JhengHei","Segoe UI",sans-serif;line-height:1.55}
+    .page{width:min(760px,calc(100% - 28px));margin:36px auto 55px}.hero{display:flex;align-items:center;gap:18px;padding:22px 24px;background:var(--paper);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--orange)}.hero img{width:78px;height:78px;object-fit:contain}.eyebrow{font-size:11px;letter-spacing:1.7px;color:#8d5c1d;font-weight:900}.hero h1{margin:3px 0 5px;font-size:clamp(27px,6vw,42px);line-height:1.05}.hero p{margin:0;color:var(--muted);font-size:14px}.panel{margin-top:22px;padding:22px 24px;background:rgba(255,250,241,.95);border:1px solid var(--line);box-shadow:4px 4px 0 #dfcfb2}.panel h2{margin:0 0 13px;font-size:21px}.primary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;background:#fff;border:2px solid var(--ink);color:var(--ink);text-decoration:none}.primary:hover{background:#fff1d8}.primary strong{display:block;font-size:17px}.primary span{display:block;color:var(--muted);font-size:12px}.primary b{padding:9px 12px;background:var(--ink);color:#fff;white-space:nowrap;font-size:13px}.steps{display:grid;gap:9px;margin:16px 0 0}.step{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:#fff;border:1px solid #ded1bc}.num{width:25px;height:25px;display:grid;place-items:center;flex:0 0 auto;background:var(--orange);border:1px solid var(--ink);font-weight:900}.step strong{display:block;font-size:14px}.step span{display:block;color:var(--muted);font-size:12px}.manual{border-top:1px solid var(--line);margin-top:18px;padding-top:15px;color:var(--muted);font-size:13px}.manual a{color:#8d5c1d;font-weight:700}.note{margin-top:14px;padding:10px 12px;background:#fff4df;border-left:4px solid var(--orange);color:#574a3b;font-size:12px}.footer{margin-top:18px;color:var(--muted);font-size:11px;text-align:center}@media(max-width:520px){.page{margin-top:20px}.hero{padding:17px}.hero img{width:58px;height:58px}.panel{padding:18px 16px}.primary{align-items:flex-start;flex-direction:column}.primary b{width:100%;text-align:center}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero"><img src="assets/ui/mascot.png" alt="Aetheris"><div><div class="eyebrow">CAROUSELL AUTOMATION</div><h1>Aetheris</h1><p>下載一次，安裝後即可在 Windows 使用。</p></div></section>
+    <section class="panel">
+      <h2>開始部署</h2>
+      <div class="note" style="margin:0 0 14px;border-left-color:#e3342f;background:#fff1f1"><strong>最新版本 v64</strong><br>自動分組門檻提高至 0.92，並改為只鎖定正在執行的同類操作，其他按鈕仍可使用。</div>
+      <a class="primary" href="Carousell自動上架_程序.zip?v=64" download><span><strong>📦 下載 Aetheris 最新程序包</strong><span>包含程序本身、安裝啟動檔案和必要設定</span></span><b>下載 ZIP</b></a>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><strong>下載並解壓縮 ZIP</strong><span>把完整部署包解壓縮到電腦任意資料夾。</span></div></div>
+        <div class="step"><div class="num">2</div><div><strong>雙擊「一鍵安裝環境.bat」</strong><span>它會安裝 Python 3.13、必要套件和 Chromium。</span></div></div>
+        <div class="step"><div class="num">3</div><div><strong>雙擊「啟動工具.bat」</strong><span>之後跟著網頁內的新手教學操作。</span></div></div>
+      </div>
+      <div class="note">瀏覽器只能下載檔案，不能未經確認直接替 Windows 安裝程式；下載後請由你自行執行安裝檔。</div>
+    </section>
+    <section class="panel">
+      <h2>手動下載環境</h2>
+      <div class="manual">🐍 <a href="https://www.python.org/downloads/windows/" target="_blank" rel="noopener">Python 3.13 for Windows</a><br>🌐 <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">Google Chrome</a><br>🎭 <a href="https://playwright.dev/python/docs/intro" target="_blank" rel="noopener">Playwright 官方說明</a></div>
+    </section>
+    <div class="footer">Aetheris 部署頁 · 最新程序包 v64</div>
+  </main>
+</body>
+</html>

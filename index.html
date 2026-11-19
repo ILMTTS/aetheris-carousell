@@ -8,11 +8,12 @@
     :root{--ink:#30271d;--muted:#6f6253;--paper:#fffaf1;--orange:#f2b45b;--line:#c9b99f}
     *{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#f7efe1,#edf3e9);color:var(--ink);font-family:"Microsoft JhengHei UI","Microsoft JhengHei","Segoe UI",sans-serif;line-height:1.55}
     .page{width:min(760px,calc(100% - 28px));margin:36px auto 55px}.hero{display:flex;align-items:center;gap:18px;padding:22px 24px;background:var(--paper);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--orange)}.hero img{width:78px;height:78px;object-fit:contain}.eyebrow{font-size:11px;letter-spacing:1.7px;color:#8d5c1d;font-weight:900}.hero h1{margin:3px 0 5px;font-size:clamp(27px,6vw,42px);line-height:1.05}.hero p{margin:0;color:var(--muted);font-size:14px}.panel{margin-top:22px;padding:22px 24px;background:rgba(255,250,241,.95);border:1px solid var(--line);box-shadow:4px 4px 0 #dfcfb2}.panel h2{margin:0 0 13px;font-size:21px}.primary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;background:#fff;border:2px solid var(--ink);color:var(--ink);text-decoration:none}.primary:hover{background:#fff1d8}.primary strong{display:block;font-size:17px}.primary span{display:block;color:var(--muted);font-size:12px}.primary b{padding:9px 12px;background:var(--ink);color:#fff;white-space:nowrap;font-size:13px}.steps{display:grid;gap:9px;margin:16px 0 0}.step{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:#fff;border:1px solid #ded1bc}.num{width:25px;height:25px;display:grid;place-items:center;flex:0 0 auto;background:var(--orange);border:1px solid var(--ink);font-weight:900}.step strong{display:block;font-size:14px}.step span{display:block;color:var(--muted);font-size:12px}.manual{border-top:1px solid var(--line);margin-top:18px;padding-top:15px;color:var(--muted);font-size:13px}.manual a{color:#8d5c1d;font-weight:700}.note{margin-top:14px;padding:10px 12px;background:#fff4df;border-left:4px solid var(--orange);color:#574a3b;font-size:12px}.footer{margin-top:18px;color:var(--muted);font-size:11px;text-align:center}@media(max-width:520px){.page{margin-top:20px}.hero{padding:17px}.hero img{width:58px;height:58px}.panel{padding:18px 16px}.primary{align-items:flex-start;flex-direction:column}.primary b{width:100%;text-align:center}}
+    .demo-player{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#181512;border:1px solid var(--line);border-radius:8px}.demo-description{margin:0 0 14px;color:var(--muted);font-size:13px}.demo-links{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 0;font-size:13px}.demo-links a,.demo-jump{color:#8d3028;font-weight:700;text-underline-offset:3px}.hero .demo-jump{display:inline-block;margin-left:8px}.demo-player:focus-visible{outline:3px solid #a8332d;outline-offset:4px}
   </style>
 </head>
 <body>
   <main class="page">
-    <section class="hero"><img src="assets/ui/mascot.png" alt="Aetheris"><div><div class="eyebrow">CAROUSELL AUTOMATION</div><h1>Aetheris</h1><p>下載一次，安裝後即可在 Windows 使用。</p></div></section>
+    <section class="hero"><img src="assets/ui/mascot.png" alt="Aetheris"><div><div class="eyebrow">CAROUSELL AUTOMATION</div><h1>Aetheris</h1><p>下載一次，安裝後即可在 Windows 使用。<a class="demo-jump" href="#demo">觀看操作示範</a></p></div></section>
     <section class="panel">
       <h2>開始部署</h2>
       <div class="note" style="margin:0 0 14px;border-left-color:#e3342f;background:#fff1f1"><strong>v78-env4 · 2026-11-19 一鍵安裝簡化</strong><br>下載一個程序包，完整解壓縮後雙擊「一鍵安裝環境.bat」。自動處理缺少的 Python、Chrome 及套件，驗證成功後直接開啟工具；手動下載只作備用。</div>
@@ -24,6 +25,15 @@
       </div>
       <div class="note"><strong>Python 安裝被封鎖？</strong> 若看到 PythonBA.dll 或 0xc0e90002，請先查看 <a href="assets/install-support.html?v=78-env2" target="_blank" rel="noopener">安裝支援與官方 Store 下載方式</a>。本工具不會關閉 Windows 防護；部分系統政策仍可能阻擋安裝。</div>
       <div class="note">瀏覽器只能下載檔案，不能未經確認直接替 Windows 安裝程式；下載後請由你自行執行安裝檔。</div>
+    </section>
+    <section class="panel" id="demo" aria-labelledby="demo-title">
+      <h2 id="demo-title">操作示範影片</h2>
+      <p id="demo-description" class="demo-description">3 分 07 秒 · 粵語旁白 · 使用測試圖片示範分組、檢查重複與 Carousell 表單操作。實際介面以最新程序為準。</p>
+      <video id="demo-video" class="demo-player" controls playsinline preload="metadata" poster="assets/video/aetheris-demo-poster.png" aria-label="Aetheris 操作示範影片" aria-describedby="demo-description">
+        <source src="assets/video/aetheris-demo.mp4" type="video/mp4">
+        你的瀏覽器未支援影片播放，請使用下方連結開啟 MP4。
+      </video>
+      <p class="demo-links"><a href="assets/video/aetheris-demo.mp4" target="_blank" rel="noopener">另開影片</a><a href="assets/video/aetheris-demo.mp4" download="Aetheris_操作示範.mp4">下載影片</a></p>
     </section>
     <section class="panel">
       <h2>安裝指引與備用下載</h2>
